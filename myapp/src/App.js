@@ -16,24 +16,34 @@ function App() {
   return (
 <div className="App">
   <Layout>
-    <Header className="header">
+    
+    
+  <Header className="header" style={{position: "fixed", zIndex: 1, width: '100%'}}>
       <div className="logo" />
-          <Menu
+          <Menu 
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={['1']}
           style={{ lineHeight: '64px' }}
           >
 
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
+        <Menu.Item key="1">
+        <span className="nav-text">nav 1</span></Menu.Item>
+        <Menu.Item key="2">
+        <span className="nav-text">nav 2</span></Menu.Item>
+        <Menu.Item key="3">
+        <span className="nav-text">nav 3</span></Menu.Item>
         </Menu>
     </Header>
-       <Content style={{ padding: "0 50px" }}>
+    
+       
       
-<Layout style={{ padding: "24px 0", background: "#fff" }}>
-        <Sider width={200} style={{ background: "#fff" }}>
+<Layout style={{ padding: "24px 0", background: "white" }}>
+        <Sider  style={{ background: "white" ,
+          overflow: "auto",
+          height: "100vh",
+          position: "fixed",
+          left: 0 }}>
           <Menu
             mode="inline"
             defaultSelectedKeys={["1"]}
@@ -45,14 +55,14 @@ function App() {
               title={
                 <span>
                   <Icon type="user" />
-                  subnav 1
+                  subnav  1
                 </span>
               }
             >
-              <Menu.Item key="1">option1</Menu.Item>
-              <Menu.Item key="2">option2</Menu.Item>
-              <Menu.Item key="3">option3</Menu.Item>
-              <Menu.Item key="4">option4</Menu.Item>
+              <Menu.Item key="1">option 1</Menu.Item>
+              <Menu.Item key="2">option 2</Menu.Item>
+              <Menu.Item key="3">option 3</Menu.Item>
+              <Menu.Item key="4">option 4</Menu.Item>
             </SubMenu>
             <SubMenu
               key="sub2"
@@ -84,7 +94,7 @@ function App() {
             </SubMenu>
           </Menu>
         </Sider>
-        <Content style={{ padding: "0 24px", minHeight: 480 }}>
+        <Content style={{  margin: "80px 250px 0" ,overflow: "initial"}}>
           <Table1 />
           <Table2 />
           <Table3 />
@@ -93,8 +103,8 @@ function App() {
       </Content>
 
       </Layout>
-    </Content>
-    <Footer style={{ textAlign: "center" }}>
+    
+    <Footer style={{ textAlign: "center" ,position: "sticky", bottom: "0" }}>
       Ant Design ©2018 Created by Ant UED
     </Footer>
   </Layout>
