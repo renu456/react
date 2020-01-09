@@ -10,7 +10,7 @@ const { Content } = Layout;
 function Main() {
   return (
     <Content style={{ margin: "65px 10px 0 " }}>
-          <div style={{ background: "white", minHeight: 260 }}> Renu
+          <div style={{ background: "white", minHeight: 260 }}>
               <Table1 />
              <Table2 />
              <Table3 />
